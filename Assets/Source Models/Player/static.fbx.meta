@@ -35,7 +35,11 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
+<<<<<<< HEAD
     isReadable: 1
+=======
+    isReadable: 0
+>>>>>>> e6c48b66147ef6931dd6aca071a6ded08602b6ed
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -50,7 +54,11 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
+<<<<<<< HEAD
     generateSecondaryUV: 1
+=======
+    generateSecondaryUV: 0
+>>>>>>> e6c48b66147ef6931dd6aca071a6ded08602b6ed
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
