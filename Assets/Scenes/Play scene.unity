@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 961744378}
   - component: {fileID: 961744377}
   - component: {fileID: 961744380}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1564,7 +1564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 324, y: 119}
+  m_AnchoredPosition: {x: 324, y: 309}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701099643
@@ -1781,6 +1781,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9a4f6604e127e941b158b398299516e, type: 3}
+--- !u!4 &2094814831 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 49251251, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
+  m_PrefabInstance: {fileID: 5257265714858705450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2117263172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1907,9 +1912,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 49251251, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 49251251, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 49251251, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1719516571, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719516571, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
+      propertyPath: isGrounded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719516571, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 2094814831}
+    - target: {fileID: 1719516571, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
+      propertyPath: groundRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719516571, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1719516573, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
       propertyPath: m_Radius
@@ -1918,6 +1951,10 @@ PrefabInstance:
     - target: {fileID: 1719516573, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
       propertyPath: m_Center.z
       value: 0.017571107
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719516574, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
+      propertyPath: MinDistance
+      value: 0.4393921
       objectReference: {fileID: 0}
     - target: {fileID: 2532192072735446981, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
       propertyPath: m_RootOrder
