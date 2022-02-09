@@ -12,7 +12,7 @@ public class ObstacleBehavior : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            controls.TakeDamage(1);
+            controls.TakeDamage(10);
         }
     }
 }
