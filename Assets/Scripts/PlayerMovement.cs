@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontalInput;
     public float horizontalMultiplier = 2;
 
-    public UIControls controls;
+   
 
     [Header("Ground Detection")]
     public Transform groundCheck;
@@ -48,11 +48,5 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector3.up * jumpForce);
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            controls.TakeDamage(1);
-        }
-    }
+    
 }
