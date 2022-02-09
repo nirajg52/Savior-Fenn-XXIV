@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundRadius = 0.5f;
     public LayerMask groundMask;
     public bool isGrounded;
-    float jumpForce = 400f;
+    float jumpForce = 350f;
 
     // Start is called before the first frame update
     private void FixedUpdate()

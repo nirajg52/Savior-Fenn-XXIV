@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1908116062960751109}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Prop_Block_2x2
-  m_TagString: Obstacles
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8787937314774815144}
   - component: {fileID: 7155251274854475442}
   - component: {fileID: 417449632130717178}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Brick_Accent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,10 +143,9 @@ GameObject:
   - component: {fileID: 7085863530531350172}
   - component: {fileID: 7875609992535731505}
   - component: {fileID: 7513496831982421405}
-  - component: {fileID: 199126122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Brick
-  m_TagString: Obstacles
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,22 +223,9 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7853666327288453706}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9c1b8059dc80aff498d27f36e3df13af, type: 2}
---- !u!114 &199126122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7853666327288453706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d569002e9f67748a4e4c56ab8fc0eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controls: {fileID: 0}
