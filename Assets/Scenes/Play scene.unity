@@ -2443,7 +2443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1719516571, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
       propertyPath: speed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1719516571, guid: d88093bd15230d643b5a9c87cea731a1, type: 3}
       propertyPath: isGrounded
