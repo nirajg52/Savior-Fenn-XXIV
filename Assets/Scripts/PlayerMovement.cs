@@ -10,12 +10,15 @@ public class PlayerMovement : MonoBehaviour
     float horizontalInput;
     public float horizontalMultiplier = 2;
 
+    public UIControls controls;
+
     [Header("Ground Detection")]
     public Transform groundCheck;
     public float groundRadius = 0.5f;
     public LayerMask groundMask;
     public bool isGrounded;
     float jumpForce = 400f;
+
     // Start is called before the first frame update
     private void FixedUpdate()
     {
@@ -43,5 +46,13 @@ public class PlayerMovement : MonoBehaviour
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
 
         rb.AddForce(Vector3.up * jumpForce);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            controls.TakeDamage(1);
+        }
     }
 }
