@@ -8,11 +8,10 @@ public class ObstacleBehavior : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-     
-
         if (other.gameObject.CompareTag("Player"))
         {
             controls.TakeDamage(10);
         }
+
     }
 }
