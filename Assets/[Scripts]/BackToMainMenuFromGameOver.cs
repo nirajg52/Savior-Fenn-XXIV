@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class BackToMainMenuFromGameOver : MonoBehaviour
 {
-    
-
     // Update is called once per frame
     public void LoadScene()
     {

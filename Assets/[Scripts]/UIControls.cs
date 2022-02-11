@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIControls : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class UIControls : MonoBehaviour
         int health = int.Parse(HealthBar.value.ToString());
         health -= damage;
         HealthBar.value = health;
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
 
