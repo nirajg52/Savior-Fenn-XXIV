@@ -25,7 +25,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            controls.TakeDamage(100);
+            controls.TakeDamage(45);
         }
 
     }
