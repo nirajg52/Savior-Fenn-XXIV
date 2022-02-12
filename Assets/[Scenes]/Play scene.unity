@@ -2088,7 +2088,7 @@ PrefabInstance:
       objectReference: {fileID: 1896888706}
     - target: {fileID: 40074551107938667, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 313564396118918025, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
       propertyPath: m_Layer
@@ -5306,7 +5306,7 @@ PrefabInstance:
       objectReference: {fileID: 1896888706}
     - target: {fileID: 40074551107938667, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 313564396118918025, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
       propertyPath: m_Layer
@@ -5772,7 +5772,7 @@ PrefabInstance:
       objectReference: {fileID: 1896888706}
     - target: {fileID: 40074551107938667, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 313564396118918025, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
       propertyPath: m_Layer
@@ -9697,25 +9697,9 @@ PrefabInstance:
       propertyPath: controls
       value: 
       objectReference: {fileID: 1896888706}
-    - target: {fileID: 40074551107938667, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 40074551107938667, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 313564396118918025, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
-      propertyPath: m_Layer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4217841702315832739, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
       propertyPath: m_Name
       value: Terrain_Water
-      objectReference: {fileID: 0}
-    - target: {fileID: 4217841702315832739, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
-      propertyPath: m_Layer
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7838253663705464954, guid: 3c890f98b74b5a948840f0124d8ba90e, type: 3}
       propertyPath: m_RootOrder

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7787869189646267383}
   - component: {fileID: 40074551107938667}
   - component: {fileID: 323558575}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7838253663705464954}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Terrain_Water
   m_TagString: Obstacles
   m_Icon: {fileID: 0}

@@ -35,7 +35,11 @@ public class PauseMenuController : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
-
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource a in audios)
+        {
+            a.Play();
+        }
     }
 
     void Pause()
@@ -43,7 +47,11 @@ public class PauseMenuController : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
-
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        foreach(AudioSource a in audios)
+        {
+            a.Pause();
+        }
     }
 
 
