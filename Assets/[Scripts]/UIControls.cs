@@ -16,6 +16,7 @@ public class UIControls : MonoBehaviour
         health -= damage;
         HealthBar.value = health;
 
+
         if (health <= 0)
         {
             SceneManager.LoadScene("GameOver");

@@ -12,6 +12,6 @@ public class ObstacleBehavior : MonoBehaviour
         {
             controls.TakeDamage(10);
         }
-
+     
     }
 }

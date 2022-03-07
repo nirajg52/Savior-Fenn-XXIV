@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5;
     public Rigidbody rb;
 
+    
+
     float horizontalInput;
     public float horizontalMultiplier = 2;
+
+
 
    
 
@@ -46,6 +51,24 @@ public class PlayerMovement : MonoBehaviour
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
         rb.AddForce(Vector3.up * jumpForce);
     }
+    /*
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+        SceneManager.LoadScene("Main Menu Scene");
+    }
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
 
-    
+        
+
+        Vector3 position;
+
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+    }
+    */
 }
