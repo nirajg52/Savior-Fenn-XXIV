@@ -8,14 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5;
     public Rigidbody rb;
 
-    
-
     float horizontalInput;
     public float horizontalMultiplier = 2;
-
-
-
-   
 
     [Header("Ground Detection")]
     public Transform groundCheck;
@@ -23,9 +17,12 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
     public float jumpForce = 350f;
-    private Animator animator;
+    public Animator animator;
     int jumpHash = Animator.StringToHash("Jump");
     int runStateHash = Animator.StringToHash("RunState");
+
+    [Header("Onscreen Buttons")]
+    public GameObject onScreenButtons;
 
     // Start is called before the first frame update
 
@@ -34,12 +31,20 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
 
     }
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         Move();
     }
 
-    private void Move()
+    public void Move()
+    {
+        Vector3 forwardMove = transform.forward * speed * Time.fixedDeltaTime;
+        Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
+        rb.MovePosition(rb.position + forwardMove + horizontalMove);
+        animator.SetTrigger(runStateHash);
+
+    }
+    public void Move(float horizontalInput)
     {
         Vector3 forwardMove = transform.forward * speed * Time.fixedDeltaTime;
         Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
@@ -49,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
+    public void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundRadius, groundMask);
 
@@ -67,6 +72,22 @@ public class PlayerMovement : MonoBehaviour
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
         rb.AddForce(Vector3.up * jumpForce);
         animator.SetTrigger(jumpHash);
+    }
+
+    public void OnJumpButton_Pressed()
+    {
+        if (isGrounded)
+        {
+            Jump();
+        }
+    }
+    public void OnLeftButton_Pressed()
+    {
+        Move(-1.0f);
+    }
+    public void OnRightButton_Pressed()
+    {
+        Move(1.0f);
     }
     /*
     public void SavePlayer()
