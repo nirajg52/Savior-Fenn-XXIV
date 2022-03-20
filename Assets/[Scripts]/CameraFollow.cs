@@ -10,6 +10,10 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        if (Application.platform != RuntimePlatform.Android && Application.platform != RuntimePlatform.IPhonePlayer)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         offset = transform.position - player.position;
     }
 

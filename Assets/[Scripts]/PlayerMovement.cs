@@ -83,11 +83,11 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnLeftButton_Pressed()
     {
-        Move(-1.0f);
+        Move(-4.0f);
     }
     public void OnRightButton_Pressed()
     {
-        Move(1.0f);
+        Move(4.0f);
     }
     /*
     public void SavePlayer()
