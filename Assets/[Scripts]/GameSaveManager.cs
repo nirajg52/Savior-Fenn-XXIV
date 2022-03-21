@@ -52,16 +52,16 @@ public class GameSaveManager : MonoBehaviour
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/MySaveData.dat", FileMode.Open);
-            GameData data = (GameData)bf.Deserialize(file);
+            GameData gameData = (GameData)bf.Deserialize(file);
             file.Close();
             player.gameObject.GetComponent<PlayerMovement>().enabled = false;
-            player.position = JsonUtility.FromJson<Vector3>(data.position);
+            player.position = JsonUtility.FromJson<Vector3>(gameData.position);
             player.gameObject.GetComponent<PlayerMovement>().enabled = true;
 
             //for health
-            heathSlider.gameObject.GetComponent<HealthScript>().enabled = false;
-            heathSlider.value = JsonUtility.FromJson<float>(data.healthValue);
-            heathSlider.gameObject.GetComponent<HealthScript>().enabled = true;
+            heathSlider.gameObject.GetComponent<UIControls>().enabled = false;
+            heathSlider.value = JsonUtility.FromJson<float>(gameData.healthValue);
+            heathSlider.gameObject.GetComponent<UIControls>().enabled = true;
 
 
             Debug.Log("Game data loaded!");

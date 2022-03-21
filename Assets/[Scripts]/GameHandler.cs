@@ -11,7 +11,7 @@ public class GameHandler : MonoBehaviour
 
     void Start()
     {
-        CoinText=GameObject.FindObjectOfType<TextMeshProUGUI>();
+       // CoinText=GameObject.FindObjectOfType<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
