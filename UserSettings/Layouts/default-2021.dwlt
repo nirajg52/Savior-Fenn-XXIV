@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Simulator
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 87
+  controlID: 95
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -395,22 +395,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/[Scenes]
+    - Assets/[Scripts]
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/[Scenes]
+  - Assets/[Scripts]
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Studying\Semester 4\22W -COMP397-Web Game Programming(SEC002)\Group_Project\Savior-Fenn-XXIV-Ex\Savior-Fenn-XXIV-Ex
+  m_LastProjectPath: C:\Studying\Semester 4\22W -COMP397-Web Game Programming(SEC002)\Savior-Fenn-XXIV\Savior-Fenn-XXIV
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e4b00000
-    m_LastClickedID: 45284
-    m_ExpandedIDs: 00000000e2b0000000ca9a3b
+    m_SelectedIDs: eab00000
+    m_LastClickedID: 45290
+    m_ExpandedIDs: 00000000e6b0000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -830,9 +830,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7c840000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 34afffff5cb0ffff
+      m_ExpandedIDs: 5eb0ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
