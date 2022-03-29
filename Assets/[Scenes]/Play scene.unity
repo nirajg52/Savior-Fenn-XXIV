@@ -12431,7 +12431,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 6896122432608235600, guid: ca9492d7e34bb0846a5aa6d5331fe9e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -12462,16 +12461,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6896122432608235601, guid: ca9492d7e34bb0846a5aa6d5331fe9e8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 473.6
-=======
-    - target: {fileID: 6896122432608235601, guid: ca9492d7e34bb0846a5aa6d5331fe9e8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 307
+      value: 362
       objectReference: {fileID: 0}
-    - target: {fileID: 6896122432608235601, guid: ca9492d7e34bb0846a5aa6d5331fe9e8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 491
->>>>>>> Stashed changes
+    - target: {fileID: 6896122432608235602, guid: ca9492d7e34bb0846a5aa6d5331fe9e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6896122433211093941, guid: ca9492d7e34bb0846a5aa6d5331fe9e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
