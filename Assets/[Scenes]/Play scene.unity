@@ -11577,6 +11577,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8416790913255146564, guid: ba2a15b391dd2f1439ee8134d7577cd9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416790913255146564, guid: ba2a15b391dd2f1439ee8134d7577cd9, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -11920,6 +11924,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9365bbc96272a44798886520015e85f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4982188750353332828
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430174099}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.019999998, z: 2}
+  m_Center: {x: 0, y: -1.4551915e-11, z: 0.0000000027939677}
 --- !u!1001 &5257265714858705450
 PrefabInstance:
   m_ObjectHideFlags: 0
