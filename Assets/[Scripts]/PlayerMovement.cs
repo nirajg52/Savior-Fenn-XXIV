@@ -74,15 +74,6 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity= new Vector3(0f, 0f,0f);
     }
 
-    public void Move(float horizontalInput)
-    {
-        Vector3 forwardMove = transform.forward * speed * Time.fixedDeltaTime;
-        Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
-        rb.MovePosition(rb.position + forwardMove + horizontalMove);
-        animator.SetTrigger(runStateHash);
-
-    }
-
     // Update is called once per frame
     public void Update()
     {
@@ -111,14 +102,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
     }
-    public void OnLeftButton_Pressed()
-    {
-        Move(-5.0f);
-    }
-    public void OnRightButton_Pressed()
-    {
-        Move(5.0f);
-    }
+
     /*
     public void SavePlayer()
     {
