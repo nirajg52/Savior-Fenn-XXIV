@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundRadius = 0.5f;
     public LayerMask groundMask;
     public bool isGrounded;
+    private bool moveLeft, moveRight;
     public float jumpForce = 350f;
     public Animator animator;
     int jumpHash = Animator.StringToHash("Jump");
@@ -23,17 +25,29 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Onscreen Buttons")]
     public GameObject onScreenButtons;
+   
 
     // Start is called before the first frame update
 
-    void Start() 
+    void Start()
     {
         animator = GetComponent<Animator>();
+        moveLeft = false;
+        moveRight = false;
 
     }
     public void FixedUpdate()
     {
         Move();
+
+        if (moveLeft)
+        {
+            rb.velocity = new Vector3(0f, 0f, -5f);
+        }
+        if (moveRight)
+        {
+            rb.velocity = new Vector3(0f, 0f, 5f);
+        }
     }
 
     public void Move()
@@ -44,6 +58,22 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger(runStateHash);
 
     }
+
+    public void MoveLeft()
+    {
+        moveLeft = true;
+    }
+    public void MoveRight()
+    {
+        moveRight = true;
+    }
+    public void StopMoving()
+    {
+        moveLeft = false;
+        moveRight = false;
+        rb.velocity= new Vector3(0f, 0f,0f);
+    }
+
     public void Move(float horizontalInput)
     {
         Vector3 forwardMove = transform.forward * speed * Time.fixedDeltaTime;
@@ -83,11 +113,11 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnLeftButton_Pressed()
     {
-        Move(-4.0f);
+        Move(-5.0f);
     }
     public void OnRightButton_Pressed()
     {
-        Move(4.0f);
+        Move(5.0f);
     }
     /*
     public void SavePlayer()

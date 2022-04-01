@@ -16,7 +16,8 @@ using UnityEngine.UI;
 public class GameSaveManager : MonoBehaviour
 {
 
-    
+    public Transform enemy;
+
     public Transform player;
 
     public GameObject coinPrefab;
@@ -38,15 +39,16 @@ public class GameSaveManager : MonoBehaviour
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/MySaveData.dat");
-        GameData gameData = new GameData();
+        GameData gameData = new GameData();     
         gameData.position = JsonUtility.ToJson(player.position);
-        gameData.healthValue = JsonUtility.ToJson(heathSlider.value);
+        
+        gameData.healthValue = JsonUtility.ToJson(heathSlider.value);      
         bf.Serialize(file, gameData);
         file.Close();
         Debug.Log("Game data saved!");
     }
 
-    void LoadGame()
+        void LoadGame()
     {
         if (File.Exists(Application.persistentDataPath + "/MySaveData.dat"))
         {
@@ -56,7 +58,11 @@ public class GameSaveManager : MonoBehaviour
             file.Close();
             player.gameObject.GetComponent<PlayerMovement>().enabled = false;
             player.position = JsonUtility.FromJson<Vector3>(gameData.position);
+       
             player.gameObject.GetComponent<PlayerMovement>().enabled = true;
+           
+
+
 
             //for health
             heathSlider.gameObject.GetComponent<UIControls>().enabled = false;
