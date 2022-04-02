@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameHandler : MonoBehaviour
 {
     public TextMeshProUGUI CoinText;
-    public int coins = 0;
+    public static int coins = 0;
 
     void Start()
     {

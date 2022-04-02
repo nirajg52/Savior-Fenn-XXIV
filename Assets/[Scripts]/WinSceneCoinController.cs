@@ -7,9 +7,12 @@ public class WinSceneCoinController : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshProUGUI CoinText;
-    private int coins = 0;
+    private int coins;
 
-    
+    void Start()
+    {
+        coins = GameHandler.coins;
+    }
 
     // Update is called once per frame
     void Update()

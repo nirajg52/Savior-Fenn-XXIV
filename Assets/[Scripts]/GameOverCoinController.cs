@@ -6,8 +6,12 @@ using UnityEngine;
 public class GameOverCoinController : MonoBehaviour
 {
     public TextMeshProUGUI CoinText;
-    public int coins = 0;
+    public int coins;
 
+    void Start()
+    {
+        coins = GameHandler.coins;
+    }
 
     // Update is called once per frame
     void Update()
