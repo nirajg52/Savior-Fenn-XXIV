@@ -10055,7 +10055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1439544616382815011}
   player: {fileID: 1719516570}
-  coinPrefab: {fileID: 0}
+  coinText: {fileID: 1642016865}
   heathSlider: {fileID: 1697063690}
 --- !u!1 &1943481796
 GameObject:
@@ -10342,7 +10342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoinText: {fileID: 1642016865}
-  coins: 0
 --- !u!1001 &2019627115
 PrefabInstance:
   m_ObjectHideFlags: 0

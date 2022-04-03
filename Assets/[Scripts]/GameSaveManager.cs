@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +12,8 @@ using UnityEngine.UI;
 {
     public string position;
     public string healthValue;
-    public int totalCoin;
+    public string totalCoin;
+    public string enemyPosition;
 }
 
 public class GameSaveManager : MonoBehaviour
@@ -20,7 +23,7 @@ public class GameSaveManager : MonoBehaviour
 
     public Transform player;
 
-    public GameObject coinPrefab;
+    public TextMeshProUGUI coinText;
 
     public Slider heathSlider;
 
@@ -41,6 +44,8 @@ public class GameSaveManager : MonoBehaviour
         FileStream file = File.Create(Application.persistentDataPath + "/MySaveData.dat");
         GameData gameData = new GameData();     
         gameData.position = JsonUtility.ToJson(player.position);
+        gameData.enemyPosition = JsonUtility.ToJson(enemy.position);
+        gameData.totalCoin = JsonUtility.ToJson(coinText.text);
         
         gameData.healthValue = JsonUtility.ToJson(heathSlider.value);      
         bf.Serialize(file, gameData);
@@ -58,9 +63,19 @@ public class GameSaveManager : MonoBehaviour
             file.Close();
             player.gameObject.GetComponent<PlayerMovement>().enabled = false;
             player.position = JsonUtility.FromJson<Vector3>(gameData.position);
-       
+            
+            coinText.text = JsonUtility.FromJson<string>(gameData.totalCoin);
+
+
             player.gameObject.GetComponent<PlayerMovement>().enabled = true;
-           
+
+
+            enemy.gameObject.GetComponent<EnemyBehavior>().enabled = false;
+            enemy.position = JsonUtility.FromJson<Vector3>(gameData.enemyPosition);
+            enemy.gameObject.GetComponent<EnemyBehavior>().enabled = true;
+
+
+
 
 
 
@@ -74,7 +89,7 @@ public class GameSaveManager : MonoBehaviour
         }
         else
         {
-
+            Debug.Log("Game not found");
         }
     }
     }
