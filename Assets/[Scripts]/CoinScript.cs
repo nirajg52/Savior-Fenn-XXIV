@@ -7,6 +7,8 @@ public class CoinScript : MonoBehaviour
     //public GameHandler GH;
     public AudioClip coinSound;
 
+    public PlayerMovement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,20 +21,18 @@ public class CoinScript : MonoBehaviour
         transform.Rotate(0, 90 * Time.deltaTime, 0);
     }
 
-
-
     private void OnTriggerEnter(Collider other)
     {
         GameHandler.coins++;
 
-        if (quest.isActive)
+        if (playerMovement.quest.isActive)
         {
-            quest.goal.CoinCollected();
-            if (quest.goal.IsReached())
+            playerMovement.quest.goal.CoinCollected();
+            if (playerMovement.quest.goal.IsReached())
             {
                 GameHandler.coins += 10;
 
-                quest.Complete();
+                playerMovement.quest.Complete();
             }
         }
 
