@@ -10057,6 +10057,7 @@ MonoBehaviour:
   player: {fileID: 1719516570}
   coinText: {fileID: 1642016865}
   heathSlider: {fileID: 1697063690}
+  canvas: {fileID: 1966611057}
 --- !u!1 &1943481796
 GameObject:
   m_ObjectHideFlags: 0

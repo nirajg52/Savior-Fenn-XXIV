@@ -27,6 +27,7 @@ public class GameSaveManager : MonoBehaviour
 
     public Slider heathSlider;
 
+    public Canvas canvas;
 
     public void OnSaveButton_Pressed()
     {
@@ -45,15 +46,27 @@ public class GameSaveManager : MonoBehaviour
         GameData gameData = new GameData();     
         gameData.position = JsonUtility.ToJson(player.position);
         gameData.enemyPosition = JsonUtility.ToJson(enemy.position);
-        gameData.totalCoin = JsonUtility.ToJson(coinText.text);
-        
-        gameData.healthValue = JsonUtility.ToJson(heathSlider.value);      
+
+
+        int coinNumber = GameHandler.coins;
+        Vector3 coinVector = new Vector3(coinNumber, 0, 0);
+        gameData.totalCoin= JsonUtility.ToJson(coinVector);
+
+
+  
+
+ 
+        //save health value using Vector3
+        int health = int.Parse(heathSlider.value.ToString());
+        Vector3 healthVector = new Vector3(health, 0, 0);
+        gameData.healthValue = JsonUtility.ToJson(healthVector);
+
         bf.Serialize(file, gameData);
         file.Close();
         Debug.Log("Game data saved!");
     }
 
-        void LoadGame()
+    void LoadGame()
     {
         if (File.Exists(Application.persistentDataPath + "/MySaveData.dat"))
         {
@@ -63,27 +76,23 @@ public class GameSaveManager : MonoBehaviour
             file.Close();
             player.gameObject.GetComponent<PlayerMovement>().enabled = false;
             player.position = JsonUtility.FromJson<Vector3>(gameData.position);
-            
-            coinText.text = JsonUtility.FromJson<string>(gameData.totalCoin);
-
-
             player.gameObject.GetComponent<PlayerMovement>().enabled = true;
 
+            //load coin value
+            Vector3 coinVector = JsonUtility.FromJson<Vector3>(gameData.totalCoin);
+            int coinValue = (int)coinVector[0];
+            GameHandler.coins = coinValue;
 
             enemy.gameObject.GetComponent<EnemyBehavior>().enabled = false;
             enemy.position = JsonUtility.FromJson<Vector3>(gameData.enemyPosition);
             enemy.gameObject.GetComponent<EnemyBehavior>().enabled = true;
 
-
-
-
-
-
-            //for health
+            //load health values
+            Vector3 healthVector = JsonUtility.FromJson<Vector3>(gameData.healthValue);
+            float healthValue = healthVector[0];
             heathSlider.gameObject.GetComponent<UIControls>().enabled = false;
-            heathSlider.value = JsonUtility.FromJson<float>(gameData.healthValue);
+            heathSlider.value = healthValue;
             heathSlider.gameObject.GetComponent<UIControls>().enabled = true;
-
 
             Debug.Log("Game data loaded!");
         }
