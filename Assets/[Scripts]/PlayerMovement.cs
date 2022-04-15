@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Onscreen Buttons")]
     public GameObject onScreenButtons;
-   
+
+    public Quest quest;
 
     // Start is called before the first frame update
 
