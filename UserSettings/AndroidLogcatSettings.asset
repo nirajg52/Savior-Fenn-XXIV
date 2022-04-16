@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "emulator-5554",
         "name": "ca.teamdevstorms.saviorfennxxiv",
-        "processId": 3237,
+        "processId": 2839,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,6 +12,18 @@
             "deviceId": "emulator-5554",
             "name": "ca.teamdevstorms.saviorfennxxiv",
             "processId": 3237,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.teamdevstorms.saviorfennxxiv",
+            "processId": 3941,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.teamdevstorms.saviorfennxxiv",
+            "processId": 2839,
             "exited": false
         }
     ],
